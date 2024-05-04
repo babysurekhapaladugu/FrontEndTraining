@@ -1,5 +1,7 @@
 <html lan="en">
-    <head></head>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
     <style>
         h1{
             background-color: rgb(60, 60, 225);
@@ -11,9 +13,81 @@
             padding-bottom: 100pt;
         }
         .image-container {
-  position: relative;
+  position:sticky;
   display: inline-block;
+  padding-bottom: 200px;
 }
+.container {
+  position: sticky;
+  text-align: center;
+  color: white;
+}
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: relative;
+display: flex;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  padding-right: 20px;
+  padding-right: 200px;
+}
+.text-block1 {
+  position:fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-left: 200px;
+}
+
+/*Centered text */
+.centered {
+  position: absolute;
+  top: 150%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+}
+h2{
+color: brown;
+}
+body{
+  background-color: lightskyblue;
+}
+div{
+  background-color:rgb(216, 194, 71) ;
+}
+.loginBox{
+                border-style: solid;
+                border-radius: 200px;
+                border-top-left-radius: 30px;
+                border-width: 100px;
+                border-top-color: chartreuse;
+                width:40%;
+                height: 250px;
+                margin-top:20%;
+                margin-bottom:20%;
+                margin-left: 20%;
+                margin-right:30%;
+                padding-top:150px;
+                padding-left: 120px;
+                background-repeat: no-repeat;
+                background-size:cover;
+                color:white;
+                
+            }
+            footer{
+                text-align: center;
+                background-color:black ;
+                color: white;
+            }
+
 
  </style>
     <body>
@@ -28,12 +102,44 @@
     <th><a href="./html/About us.html">ABOUT US</a></th>
         </tr>
     </table>
+    <p><h2>“A man's mind, stretched by new ideas, may never return to its original dimensions.”“Anyone who has never made a mistake has never tried anything new.”“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”“The illiterate of the future will not be the person who cannot read. It will be the person who does not know how to learn.”“Any book that helps a child to form a habit of reading, to make reading one of his deep and continuing needs, is good for him.”</h2></p>
+    <div class="container">
+
+        <img src="./html/asserts/happy-student-with-graduation-hat-diploma-grey.jpg" alt="kids" style="width:50%"><hr>
+        
+        <img src="./html/asserts/note-thanun-CYlPykF-qAM-unsplash.jpg" alt="kids" style="width:50%"><hr>
+        <img src="./html/asserts/aman-shrivastava-w6caoaJzXIE-unsplash (1).jpg" alt="kids" style="width:50%"><hr>
+        <img src="./html/asserts/element5-digital-OyCl7Y4y0Bk-unsplash.jpg" alt="kids" style="width:50%"><hr>
+        <div class="text-block">
+          <h4> Education </h4><br>
+          <p> My life will be more beautiful with Education.</p>
+          <div class="text-block1">
+            <h4> Kidzee </h4>
+            <p>Education is the most powerful weapon in this world. </p>
+        </div>
+       
+
+    </div>
     <table>
     <tr>
     <td></td>
-    <td><input type="button" value="Admissions opend"/></td>
+    <td><button type="button" CLASS="btn btn-success">Addmissions opend</button></td>
     <td><input type="button" value="NEXT"/></td>
 </tr>
 </table>
+<div>
+<footer>
+<ul>
+  <li><a href="http://www.founders of kidzee.com" target="_blank"></a>Founders</li>
+  <li><a href="./html/contact us.html"></a> contact us </li>
+  <li><a href="./html/About us.html"></a>About Us</li>
+  <li><a href="./html/Home.html"></a>home</li>
+  <li><a href="./html/login.html"></a>log in us </li>
+  <li><a href="./html/Complaint box.html"></a> complaint box</li>
+  <li><a href="http://www.kidzee.com"></a> branches</li></ul>
+
+</ol>
+</footer>
+</div>
 </body>
 </html>
