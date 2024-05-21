@@ -14,46 +14,47 @@
 </head>
 
 <body>
- <script>
-  Northsinal()
-  {
-    'NR'.classname="bg-success";
-    'EL'.classname="bg-success";
-    'SL'.classname="bg-success";
-    'WL'.classname="bg-success";
-    'NL'.classname="bg-success";
-  }
-  Northsinal()
-  resetsignal()
-  {
-ER-Red;
-SR-Red;
-WR-Red;
-  }
-  Eastsinal()
-  resetsignal()
-  {
-SR-Red;
-WR-Red;
-NR-Red;
-  }
-  Southsinal()
-  resetsignal()
-  {
-WR-Red;
-NR-Red;
-ER-Red;
-  }
-  Westsinal()
-  resetsignal()
-  {
-NR-Red;
-ER-Red;
-SR-Red;
-  }
+  <script>
+    function resetSignal() {
+        document.getElementById("ine").style.backgroundColor = "green";
+        document.getElementById("ins").style.backgroundColor = "green";
+        document.getElementById("inw").style.backgroundColor = "green";
+        document.getElementById("inn").style.backgroundColor = "green";
+        document.getElementById("oute").style.backgroundColor = "green";
+        document.getElementById("outw").style.backgroundColor = "green";
+        document.getElementById("1").style.backgroundColor = "green";
+        document.getElementById("2").style.backgroundColor = "green";
+        document.getElementById("3").style.backgroundColor = "green";
+        document.getElementById("4").style.backgroundColor = "green";
+        document.getElementById("outn").style.backgroundColor = "green";  
+        document.getElementById("outs").style.backgroundColor = "green";      
 
-
- </script>
+    }
+    function north() {
+        resetSignal();
+        document.getElementById("ine").style.backgroundColor="red";
+        document.getElementById("ins").style.backgroundColor="red";
+        document.getElementById("inw").style.backgroundColor="red";
+    }
+    function east() {
+        resetSignal();
+        document.getElementById("ins").style.backgroundColor="red";
+        document.getElementById("inw").style.backgroundColor="red";
+        document.getElementById("inn").style.backgroundColor="red";
+    }
+    function south() {
+        resetSignal();
+        document.getElementById("inw").style.backgroundColor="red";
+        document.getElementById("inn").style.backgroundColor="red";
+        document.getElementById("ine").style.backgroundColor="red";
+    }
+    function west() {
+        resetSignal();
+        document.getElementById("inn").style.backgroundColor="red";
+        document.getElementById("ine").style.backgroundColor="red";
+        document.getElementById("ins").style.backgroundColor="red";
+    }
+</script>
  <p id="Trafic Signal System"></p>
 
     <div class="container">
@@ -69,11 +70,13 @@ SR-Red;
         </div>
         <div class="row" style="height: 100px;">
             <div class="col-4 border bg-light border-danger">
-            </div>
-            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()">North</button>
-
-            </div>
-            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()">West</button>
+    
+   </div>
+              <div class="col-4"><button type="button" class="btn btn-primary" onclick="Calc('add')">north</button></div>
+  
+            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()>east</button>
+          
+              <div class="col-3"><button type="button" class="btn btn-primary" onclick>east</button></div>
             </div>
             <div class="col-4 border bg-light border-danger">
             </div>
@@ -81,9 +84,11 @@ SR-Red;
           <div class="row" style="height: 100px;">
             <div class="col-4 border bg-light border-danger">
             </div>
-            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()">East</button>
+            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()>south</button>
+              <div class="col-2"><button type="button" class="btn btn-primary" onclick="Calc('add')">south</button></div>
             </div>
-            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()">South</button>
+            <div class="col-2 border btn btn-secondary border-danger button onclick="myFunction()>west</button>
+              <div class="col-2"><button type="button" class="btn btn-primary" onclick="Calc('add')">west</button></div>
             </div>
             <div class="col-4 border bg-light border-danger">
             </div>
