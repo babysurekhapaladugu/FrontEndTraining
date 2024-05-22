@@ -5,37 +5,48 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-<div class="row m-4">
-<div class="col"></div>
-<h2>Hai, How can i help you?</h2>
-<input type="number" id="Chat Num1" class="form-control" placeholder="Check bal"/>
-<input type="number" id="Chat Num1" class="form-control" placeholder="Recharge bal"/>
-</div>
-<div class="col"><button type="button" class="btn btn-primary" onclick="freeTypeCalc()">Plans</button></div>
-<div class="col"><button type="button" class="btn btn-primary" onclick="Calc('add')">add</button></div>
-<div class="row m-4"></div>
-<span id="CalcMsg"></span>
-<div>
+<body>
+  <div class="container">
+  <div class=" border border-dark width=200px height=400px"></div>
+  <p> Chat Box</p>
+  <h1> Enter</h1>
+  <h2> How can I help you?</h2>
+  <ul>
+    <li> recharge</li>
+    <li>balence</li>
+  </ul>
+  <input type="text" id="user id" : >
+  <input type="button" onclick="getInfo(send)"/>
+  <button class="button  btn-secondary">send</button>
+  <input type class="text "></button>
+  <button class="button  btn-secondary">recharge</button>
+  <span id="ipMsg"></span>
+  <span id="rcMsg"></span>
   <script>
-    function freeTypeCalc(){
-      let CalcCategory=document.getElementById('CalcCategory').value;
-      Calc(CalcCategory);
-    }
-    function Calc(Category){
-      let CalcNum1=Number(document.getElementById('CalcNum1').value);
-      let CalcNum2=Number(document.getElementById('CalckNum2').value);
-    }
-    let result=0;
-    switch(Category){
-      case 'add':
-        result=CalcNum1+CalcNum2;
-        console.log(result);
-        break;
-        default:
-             result = "399Rs is your balence.THANK YOU";
-              }
-              document.getElementById('CalcMsg').innerHTML = result;
+      function getInfo(){
+        let ip=Document.getElementById('ip').value;
+        let Msg=" ";
+      }
+      if(ip =='1')
+      {
+        Msg="<input type='text' id='rcAmount'/><buttonType="button" onclick="rcMsg()">Recharge</button>";
+      }
+      else if(ip=='2')
+      {
+        Msg="your balence is 399rs";
+      }
+      else {
+        Msg="Invalid Name";
+
+      }
+      document. getElementById().inner.HTML=Msg;
+      function recharge()
+      {
+        let rcAmount=Document('rcAmount()'.value);
+        Document.getElementById.inner.HTML="you have recharge 599rs";
+      }
   </script>
+</body>
 </div>
 </body>
 </html>
