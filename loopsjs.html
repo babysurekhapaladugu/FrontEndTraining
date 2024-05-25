@@ -1,0 +1,122 @@
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+        <p>1.get the in put from the user print the range 50 to 60?</p>
+        <div class="col">
+    <button type="button" onclick="loopsEx()" class="btn btn-primary">Start for loop</button>
+        </div>
+        <div>
+            <span id="loopResult"></span>
+        </div>
+        <script>
+            function loopsEx()
+            {
+        for (let num=50;num<=60;num++){
+            console.log(num);
+        }
+
+            }
+        </script>
+        </div>
+        <div>
+        <p>print the sum of number range(5to10)?</p>
+        <div class="col">
+            <button type="button" on click="loopsEx()" class="btn btn-primary">Start loop</button>
+        </div>
+        <div>
+            <span id="loopResult"></span>
+        </div>
+        <script>
+     function loopsEx(){
+
+     }
+
+    var a = 5;
+    var b = 10;
+    
+    var sum = 0;
+    
+    for (let i = a; i <= b; i++){
+        sum = sum + i;
+    
+    console.log("%d",sum);
+    
+    }
+     </script>
+    </div>
+<div>
+    <p>print the avg of sun number</p>
+    <div class="col">
+        <button type="button" on click="loopsEx()" class="btn btn-primary">click on it</button>
+    </div>
+    <div>
+        <span id="loopResult"></span>
+    </div>
+    <script>
+        function loopsEx(){
+
+        }
+        var s=1;
+        var a=5;
+    var sum=0;
+        for(let i=s;i<=a;i++){
+            avg=sum/5;
+            console.log("%d",avg);
+        }
+    </script>
+</div>
+<div>
+    <p>print the multiplication tables from 1 to 10</p>
+    </div>
+    <div class="col">
+        <input type="number" on click="loopsEx()" class="btn btn-primary"/>enter number</div>
+    </div>  
+    <div>
+        <span id="loopResult"></span>
+    </div>
+    <script>
+function loopsEx(){
+
+}
+
+var num = 1;
+        for(let i = 1; i <= 10; ++i)
+        {
+        console.log("%d * %d = %d \n", num, i, num * i);
+        }
+
+    </script>
+    </div>
+    <div>
+        <p>print the multiplication tables from 1 to 10</p>
+        </div>
+        <div class="col">
+            <h1>Five Times Table From 1 - 12.</h1>
+            <h2>Press the button to display the table.</h2>
+            <button type="button" onclick="fiveTable()">Times Table</button>
+            <div id="outputDiv"></div>
+        <div>
+            <span id="loopResult"></span>
+        </div>
+        <title>5  Table</title>
+        <script type="text/javascript">
+            
+            function fiveTable() {
+                var result = 0;
+                for (i=1; i<=10; i++){
+                     result = "5 * " + i + result + i*5 + "<br>";
+                var display =result;
+                }
+                document.getElementById("outputDiv").innerHTML = display;
+                }       
+    </script>
+    </div>
+    </body>
+    </html>
