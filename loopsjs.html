@@ -77,7 +77,7 @@
     </div>
     <div class="col">
         <input type="number" on click="loopsEx()" class="btn btn-primary"/>enter number</div>
-    </div>  
+l    </div>  
     <div>
         <span id="loopResult"></span>
     </div>
@@ -116,5 +116,173 @@ var num = 1;
                 }       
     </script>
     </div>
-    </body>
-    </html>
+    <div>
+        <div class="col"></div>            
+<p> revers</p>
+<button type="button" onclick="revers()">REVERS</button>
+<div id="outputDiv"></div>
+<div>
+<span id="loopResult"></span>
+</div>
+<script>
+    function revers() {
+        for (let num=10; num >=1; num--){
+            console.log(num); 
+        }
+    }
+</script>
+        </div>
+    </div>
+    <div>
+        <div class="col">
+            <p> print the pattrens</p>
+            <button type="button" onclick="number()">number</button>
+            <div id="pattern"></div>
+        <div>
+        <span id="loopResult"></span>
+        </div>
+        <script>
+        
+            function number(){
+                let result=" ";
+            for( let row=1;row<=5;row++)
+            {
+            for(let col=1;col<=5;col++){
+                result=result+col;
+            }
+            result=result+"<br>";
+        
+            }
+            document.getElementById("pattern").innerHTML = result;
+        }
+        </script>
+        </div>
+    </div>
+    <div>
+        <div class="col">
+            <p> print the pattrens</p>
+            <button type="button" onclick="patterns()">pattern</button>
+            <div id="pattern"></div>
+        <div>
+        <span id="loopResult"></span>
+        </div>
+        <script>
+function patterns(){
+
+            for( let num=1;num<=4;num++)
+            {
+                let number=1;
+           do{ document.write("*");number++;}
+        while(number<=num)
+        document.write("<br>")
+            }
+    
+
+}
+    </script>
+    </div>
+    </div>
+    <div>
+        <div class="col">
+            <p> print the pattrens</p>
+            <button type="button" onclick="patterns()">pattern</button>
+            <div id="pattern"></div>
+        <div>
+        <span id="loopResult"></span>
+        </div>
+        <script>
+function patterns(){
+
+            for( let num=5;num>=1;num--)
+            {
+                let number=1;
+           do{ document.write("*");number--;}
+        while(number<=num)
+        document.write("<br>")
+            }
+        }
+    </script>
+    <div>
+        <div class="col">
+    <p>print the * patterns</p>
+    <button type="button" on click="patterns()">pattern</button>
+    <div id="pattern"></div>
+    <div>
+        <span id="loopResult"></span>
+    </div>
+    <script>
+
+    function patterns(){
+
+    }
+    let n = 5;
+for (let i = 1; i <= n; i++) {
+    let str = "* ";
+    let space  = '  ';
+    document.write(space.repeat((n-i))+str.repeat(i));
+    document.write("<br>")
+}
+   </script>
+        </div>
+        </div>
+        
+        <div>
+            <div class="col">
+                <p>print the * patterns</p>
+                <button type="button" on click="patterns()">pattern</button>
+                <div id="pattern"></div>
+                <div>
+                    <span id="loopResult"></span>
+                </div>
+<script>
+    function patterns(){
+
+    }
+    let j = 5; 
+for (let i = 1; i <= j; i++) { 
+	let str = "* "; 
+	let space = ' '; 
+    document.write(space.repeat((j - i)) + str.repeat(i * 2 - 1)); 
+    document.write("<br>")
+}
+
+let k = 5;
+for (let i = k; i >= 1; i--) {
+    let str = "* ";
+    document.write(str.repeat(i));
+    document.write("<br>")
+}
+
+</script>
+</div>
+<div>
+    <div class="col">
+<p>patterns</p>
+<button type="button" on click="patterns()">pattern</button> 
+<div id="pattern"></div>
+   </div>
+   <div>
+    <span id="loopResult"></span>
+     </div>
+<script>
+    function patterns(){
+ }
+ let l = 5; 
+for (let i = 1; i <= l; i++) { 
+	let str = "*"; 
+	let space = ' '; 
+	document.write(space.repeat((l - i)) + str.repeat(i * 2 - 1)); 
+    document.write("<br>")
+} 
+for (let i = l - 1; i >= 1; i--) { 
+	let str = "*"; 
+	let space = ' '; 
+	document.write(space.repeat((l - i)) + str.repeat(i * 2 - 1)); 
+    document.write("<br>")
+}
+
+ </script>
+</div>
+</body>
+</html>
+
