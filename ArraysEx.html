@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example</title>
+</head>
+<body>
+    <div>
+        <h2>Array Example</h2>
+
+        <p id="arrOp"></p>
+        <script>
+                arrEx();
+            function arrEx(){
+
+                let arrOp = "";
+                let students = ["baby", "Avi", "Mahesh","Nani","Saran", "Ravi"];
+
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp = arrOp + "Array Length : " + students.length + "<br>";
+                arrOp += "Push Jai : " + students.push("Jai") + "<br>";
+                arrOp += "Push Rakesh : " + students.push("Rakesh") + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Pop : " + students.pop() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Reverse : " + students.reverse() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Sort : " + students.sort() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Includes Mahesh : " + students.includes("Mahesh") + "<br>";
+                arrOp += "Includes Sakthi: " + students.includes("Sakthi") + "<br>";
+                arrOp += "Index Of Saran: " + students.indexOf("Saran") + "<br>";
+                arrOp += "Last Index Od Saran : " + students.lastIndexOf("Saran") + "<br>"; 
+                arrOp += "Join * : " + students.join("*") + "<br>";
+                arrOp += "Concat Prasanth Sureka: " + students.concat(["Prasanth", "Sureka"]) + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Fill : " + students.fill("#", 2,4) + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "To String: " + students.toString() + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Slice 4 6: " + students.slice(4, 6) + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Splice 3 Dhoni: " + students.splice(3,0,"Dhoni") + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                arrOp += "Splice 2 Kholi: " + students.splice(2,1,"Kholi") + "<br>";
+                arrOp = arrOp + "Students : " + students + "<br>";
+                document.getElementById('arrOp').innerHTML = arrOp;
+
+                console.log(students);
+
+                console.log(students[5]);
+                students[7] = "Jayan";
+                console.log(students);
+                students[8] = "Arun";
+                console.log(students);
+
+            }
+        </script>
+    </div>
+    <div>
+<h2>TASK for push</h2>
+<p id="arrOp"></p>
+<script>
+     let arrOp = "";
+let students = ["aa", "bb", "cc","dd","ee", "ff","hh","ii","jj"];
+arrPush();
+function arrPush(){
+   arrOp = arrOp + "Students : " + students + "<br>";
+    arrOp = arrOp + "Array Length : " + students.length + "<br>";
+    arrOp += "Push gg kk: " + students.push("gg","kk") + "<br>";    
+    arrOp = arrOp + "Students : " + students + "<br>";
+    arrOp+="pop kk"+students.pop("kk")+"<br>"; 
+    arrOp = arrOp + "Students : " + students + "<br>";
+    arrOp+="shift mm :"+students.shift("mm")+"<br>";
+    arrOp+="unshift nn:"+students.unshift("nn")+"<br>";
+ for(let idx=0; idx < students.length;idx++){
+console.log(students[idx]); 
+ }   
+ return length;
+ 
+}
+</script>
+    </div>
+
+    <div>
+        <h4>PUSH LOGIC</h4>
+        <button onclick="arrPush([1,2,3,4,5,6,7,8],9)">check</button>
+        <p class="answer1"></p>
+    </div>
+    <div>
+        <h4>POP LOGIC</h4>
+        <button onclick="arrPop([1,2,3,4,5,6,7,8,9],9)">check</button>
+        <p class="answer2"></p>
+    </div>
+    <div>
+        <h4>SHIFT LOGIC</h4>
+        <button onclick="shift([1,2,3,4,5,6,7,8],10)">check</button>
+        <p class="answer3"></p>
+    </div>
+    <div>
+        <h4>UNSHIFT LOGIC</h4>
+        <button onclick="unShift([1,2,3,4,5],10)">check</button>
+        <p class="answer4"></p>
+    </div>
+    <div>
+        <h4>INCLUDES LOGIC</h4>
+        <button onclick="include([1,2,3,4,5],3)">check</button>
+        <p class="answer5"></p>
+    </div>
+    <div>
+        <h4>INDEXOF</h4>
+        <button onclick="indexof([1,2,3,4,5],3)">check</button>
+        <p class="answer6"></p>
+    </div>
+    <div>
+        <h4>LASTINDEXOF</h4>
+        <button onclick="lastIndexOf([1,2,3,4,5],3)">check</button>
+        <p class="answer7"></p>
+    </div>
+    <div>
+        <h4>REVERSE</h4>
+        <button onclick="arrReverse([1,2,3,4,5],5)">check</button>
+        <p class="answer8"></p>
+    </div>
+    <div>
+        <h4>JOIN</h4>
+        <button onclick="join([1,2,3,4,5],'*')">check</button>
+        <p class="answer9"></p>
+    </div>
+    <div>
+        <h4>SLICE</h4>
+        <button onclick="slice([1,2,3,4,5],(1,4))">check</button>
+        <p class="answer10"></p>
+    </div>
+<script>
+    function arrPush(arr,element){
+    let f=arr.length
+    arr[f]=element
+    document.querySelector(".answer1").innerHTML=arr
+}
+// 2
+function arrPop(arr){
+    let pop=arr[arr.length-1]
+    arr.length=arr.length-1
+    document.querySelector(".answer2").innerHTML+=`${pop}<br>`
+    document.querySelector(".answer2").innerHTML+=arr
+}
+// 3
+function shift(arr){
+    let answer=[]
+    for(var num=1;num<=arr.length-1;num++)
+    {
+        answer.push(arr[num])
+    }
+    document.querySelector(".answer3").innerHTML=answer
+}
+// 4
+function unShift(arr,element){
+    let r=[element]
+    document.querySelector(".answer4").innerHTML=`${r},${arr}`
+    }
+
+// 5
+let answer=false/true
+function include(arr,element){
+    for(let num=0;num<arr.length;num++){
+        if(arr[num]==element){
+            answer=true
+            break
+        }
+        document.querySelector(".answer5").innerHTML=answer
+}
+}
+///6
+function arrReverse(){
+   let original_array=[1,2,3,4,5];
+   let reversed_array=[];
+  for(let i=original_array.length-1;i>=0;i--){
+    reversed_array.push(original_array[i]);
+   }
+   document.querySelector(" reversed_array:").innerHTML
+   document.querySelector( reversed_array).innerHTML
+}
+
+
+
+         
+</script>
+</body>
+</html>
