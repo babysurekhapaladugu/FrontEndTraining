@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+1<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +39,7 @@
         var products=[];
         var pMsg = "";
         var productsOp="";
-
+getInput();
         function getInput(){
             pName = document.getElementById('pName');
             pPrice = document.getElementById('pPrice');
@@ -54,27 +54,83 @@
         }
         function addProduct(){
             getInput();
-            let product = [pName.value, pPrice.value, pQnty.value, pTotal.value];
-            products.push(product);
-            pMsg.innerHTML = "Product Added Successfully";
-            console.log(products);
-            displayProducts();
+           // let product = [pName.value, pPrice.value, pQnty.value, pTotal.value];
+          //  products.push(product);
+          let product={"pName":pName.value,"pPrice":pPrice.value,"pQuantity":pQnty.value,"pTotal":pTotal.value}
+          let apiURL="https://retoolapi.dev/C3ol5g/data";
+          fetch(apiURL,{
+            method:'POST',
+        headers:{
+            'content-Type':'application/json;charset=UTF-8'
+
+        },
+        body:JSON.stringify(product)
+            
+        })
+        .then(response=>{
+            if(response.ok){
+                pMsg.innerHTML="Product Added Successfully";
+                getBillingData();
+            }
+        })
         }
-        function displayProducts(){
+           
+         function displayProducts(){
             let result="";
             for(let idx=0; idx<products.length; idx++){
                 console.log(products[idx]);
                 let product = products[idx];
                 result += '<div class="row mt-4">'+
-                                '<div class="col">' + product[0]+'</div>'+
-                                '<div class="col">' + product[1]+'</div>'+
-                                '<div class="col">' + product[2]+'</div>'+
-                                '<div class="col">' + product[3]+'</div>'+
-                                '<div class="col">Update/Delete</div>'+
-                            '</div>';
+                                '<div class="col">' + pName+'</div>'+
+                                '<div class="col">' + pPrice+'</div>'+
+                                '<div class="col">' + pQnty+'</div>'+
+                                '<div class="col">' + pTotal+'</div>'+
+                                '<div class="col">'+
+                                    '<button type="button" class="btn btn-warning">Update</button>'+'<button type="button" class="btn btn-danger" onclick="deleteProduct('+product.id+')">Delete</button>'+
+                            '</div>'+
+                            '<div>';
             }
+            console.log(result);
             productsOp.innerHTML = result;
+        }
+        function getBillingData(){
+            let apiURL = "https://retoolapi.dev/u1ypSw/billingData";
+
+            fetch(apiURL)
+                .then(response => 
+                        { 
+                            if(response.ok)
+                                console.log("API call is Success");
+
+                            let data = response.json();
+                            console.log(data);
+                            return data;
+                        })
+                .then(data => { 
+                    console.log(data)
+                    products = data;
+                    displayProducts();
+                })
+                .catch( error => console.log(error))
+        }
+
+        function deleteProduct(productId){
+            let apiURL = "https://retoolapi.dev/u1ypSw/billingData";
+            apiURL += "/" + productId;
+
+            fetch(apiURL, {
+                method:'DELETE',
+                headers:{
+                    'Content-Type':'application/json;charset=UTF-8'
+                }
+            }).then(response => {
+                if(response.ok){
+                    alert("Product Deleted Successfully");
+                    getBillingData();
+                }
+            })
         }
     </script>
 </body>
 </html>
+  
