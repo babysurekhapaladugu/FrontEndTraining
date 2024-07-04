@@ -203,6 +203,151 @@
         }
     </script>
     </div>
+                   function showMsg(){
+                    //alert("Vanthutten");
+                    console.log("Print aagitten");
+                    console.log(document.getElementsByTagName('div'));
+                    console.log(document.getElementsByName(''));
+                }
+            </script>
+        </div>
+        <div>
+            <h2>Conditions</h2>
+            <div class="row m-4">
+                <div class="col"><label>Age</label></div>
+                <div class="col"><input type="number" id="ageCalc" name="ageCalc" onkeyup="ageCalc()" class="form-control"/></div>
+                <div class="col"><span id="ageCalcMsg"></span></div>
+            </div>         
+            
+            
+            <script>
+                function ageCalc(){
+                    let age = Number(document.getElementById('ageCalc').value);
+                    let msg = "";
+                    if(age > 18){
+                        if(age > 60){
+                            msg = "Senior Citizen";
+                        }else{
+                            msg="Major";
+                        }
+                    }else if(age > 10){
+                        msg = "Minor";
+                    }else if(age >5){
+                        msg = "Kid";
+                    }else if(age >0){
+                        msg = "Kolanthai";
+                    }else{
+                        msg = "Innum Porakala";
+                    }
+                    document.getElementById('ageCalcMsg').innerHTML = msg;
+                }
+            </script>
+        </div>
+        <div>
+            <h2>Set & Map</h2>
+            <script>
+                setEx();
+                function setEx(){
+                    let st = new Set();
+                    st.add("AA");
+                    st.add("ZZ");
+                    st.add("XX");
+                    st.add("BBB");
+                    st.add("ZZ");
+                    console.log(st);
+                    console.log(st.has("XX"));
+                    console.log(st.delete("BBB"));
+                    console.log(st.has("BBB"));
+                    console.log(st.delete("BBB"));
+                    console.log(st);
+                    st.forEach(data=> console.log(data));
+                    console.log(st.entries());
+                    console.log(st.clear());
+                    console.log(st);
+                }
+                mapEx();
+                function mapEx(){
+
+                    let mp = new Map();
+                    mp.set(1,"AAA");
+                    mp.set(2,"CCC");
+                    mp.set(3,"CCC");
+                    mp.set(4,"GG");
+                    console.log(mp);
+                    console.log(mp.has(2));
+                    console.log(mp.has(10));
+                    console.log(mp.delete(3));
+                    console.log(mp);
+                    console.log(mp.get(4));
+                    mp.set(4, "YYY");
+                    console.log(mp.get(4));
+                    console.log(mp.keys());
+                    console.log(mp.values());
+                    console.log(mp.size);
+                    mp.clear();
+                    console.log(mp);
+
+                }
+            </script>
+        </div>
+    </div>
+
+
+    <title>Js Topics</title>
+   <div>
+        <h2>Js Topics</h2>
+
+        <div>
+            <h3>Date</h3>
+            <p id="clck"></p>
+            <p id="dateMsg"></p>
+            <script>
+                setInterval(()=>{
+                    let dt = new Date();
+                    document.getElementById('clck').innerHTML = dt.getHours() + " : " + dt.getMinutes() + " : " + dt.getSeconds();
+                },1000);
+                dateEx();
+                function dateEx(){
+                    let dt = new Date();
+                    let dateMsg = document.getElementById('dateMsg');
+                    let result = "";
+
+                    result += "Date : " + dt + "<br>";
+                    result += "Date.now : " + Date.now() + "<br>";
+                    result += "Year : " + dt.getFullYear() + "<br>";
+                    result += "Month : " + dt.getMonth() + "<br>";
+                    result += "Day : " + dt.getDay() + "<br>";
+                    result += "Date : " + dt.getDate() + "<br>";
+                    result += "Hours : " + dt.getHours() + "<br>";
+                    result += "Mins : " + dt.getMinutes() + "<br>";
+                    result += "Milliseconds : " + dt.getMilliseconds() + "<br>";
+                    result += "Time : " + dt.getTime() + "<br>";
+                    result += "Set Year 2025 : " + dt.setFullYear(2025) + "<br>";
+                    result += "Date : " + dt + "<br>";
+                    result += "Set Month : " + dt.setMonth(10) + "<br>";
+                    result += "Date : " + dt + "<br>";
+                    result += "Set Date : " + dt.setDate(28) + "<br>";
+                    result += "Date : " + dt + "<br>";
+                    result += "Set Hour : " + dt.setHours(5) + "<br>";
+                    result += "Date : " + dt + "<br>";
+                    result += "Set Mins : " + dt.setMinutes(49) + "<br>";
+                    result += "Date : " + dt + "<br>";
+                    result += "Set Seconds : " + dt.setSeconds(59) + "<br>";
+                    result += "Date : " + dt + "<br>";
+
+
+                    let day7 = 24 * 60 * 60 * 1000 * 7;
+                    result += "7 days Milliseconds : " + day7 + "<br>";
+                    dt.setTime(dt.getTime()+day7);
+                    result += "Added Date : " + dt + "<br>";
+
+
+                    dateMsg.innerHTML = result;
+                }
+            </script>
+        </div>
+    </div>
+
 </body>
 </html>
 </body>
