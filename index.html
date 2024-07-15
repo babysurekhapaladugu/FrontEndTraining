@@ -45,34 +45,91 @@ display: table;
 .btn-group button:hover {
   background-color: #3e8e41;
 }
+.btn-group button {
+  background-color: hsl(158, 91%, 47%); 
+  border: 1px solid hsl(301, 91%, 46%); 
+  color: #d617c9; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
 </style>
     </style>
    <body>
+    <div class="btn-group">
+      <a href="./html/Home.html"><button>Home</button></a>
+      <button>Programmes</button>
+      <button>Admissions</button>
+      <button>Franchise Opportunity</button>
+      <a href="./html/contact us.html"><button>Locate us</button></a>
+    </div>
+    
+    <div style="height:500px;background-image:url('./html/asserts/four-smiley-kids-holding-books.jpg');background-size:cover" class="display-container grayscale-min"></div>
     <div><p style="color:black"><h1>Legacy
  We believe that there is ‘unique potential’ in every child; and Kidzee nurtures it. Touted to be one of the best preschools in India, we nurture and shape minds with the help of our best-in-class age appropriate progressive curriculum. We are changing the face of early childhood education with consistent upgradation and innovation to meet the current needs with a proactive future, focussed on grooming them to be ‘ever-ready for life’. Our commitment towards quality education also values aspects like self-reliance, peer interaction, and individual growth. Our solid foundation and polished business model makes it profitable for all the stakeholders involved.</h1></p></div>
- <div class="btn-group">
-    <a href="./Home.html">
-        <button>HOME</button>
-      </a>
-      <a href="./About us.html">
-        <button>ABOUT US</button>
-      </a>
-      <a href="./contact us.html">
-        <button>CONTACT US</button>
-      </a>
-      <a href="./Teacher Registration Form.html">
-        <button>Teachers Registration Form</button>
-      </a>
-      </div>
+ 
 
 <h1 style="color:brown"> WELCOME TO  THE ALL SCHOOL FACILITATORS </h1>
 <p style="color:black
 ;font-size:larger;">To conclude, the education system in India has a long way to go before it can be considered truly effective. However, many initiatives are being undertaken by the government and various other organisations to try and improve the situation. With time and effort, it is hoped that India will eventually have an educational system that meets the needs of all its citizens. </p>
 <p style="color:black;font-size: larger;">Informal education is provided outside the formal education system and does not follow any set curriculum. It includes training programs, workshops, and internships. Informal education can be beneficial for students who want to learn specific skills or knowledge that are not covered in the formal education system. It can also be helpful for students who want to gain work experience before entering the workforce.</p>
 <div class="btn-group">
-<a href="./login.html">
+<a href="./html/login.html">
     <button>LOGIN HERE</button>
 </a></div>
 
+<!-- Contact Container -->
+<div class="container padding-64 theme-l5" id="contact">
+  <div class="row">
+    <div class="col m5">
+    <div class="padding-16"><span class="xlarge border-teal bottombar">communicate us</span></div>
+      <h3>Address</h3>
+      <p>thank you for choosing us</p>
+      <p><i class="fa fa-map-marker text-teal xlarge"></i>  overall,INDIA</p>
+      <p><i class="fa fa-phone text-teal xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o text-teal xlarge"></i>  kidzee@kidzee.com</p>
+    </div>
+    <div class="col m7">
+      <form class="container card-4 padding-16 white" action="/action_page.php" target="_blank">
+      <div class="section">      
+        <label>Name</label>
+        <input class="input" type="text" name="Name" required>
+      </div>
+      <div class="section">      
+        <label>Email</label>
+        <input class="input" type="text" name="Email" required>
+      </div>
+      <div class="section">      
+        <label>Message</label>
+        <input class="input" type="text" name="Message" required>
+      </div>  
+      <input class="check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="button right theme">Send</button>
+      </form>
+    </div>
+    <div>
+    <footer>
+
+    </footer>
+
+    </div>
  </body>
 </html>
